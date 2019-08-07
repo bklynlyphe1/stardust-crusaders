@@ -1,0 +1,21 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<div class=container>
+  <h1></h1>
+  {% for table in tables %}
+  <div class= table table-bordered table-responsive>
+      <h2>Microsoft Daily Quotes</h2>
+        {{ table|safe }}
+  </div>
+  <br>
+  <br>
+  {% endfor %}
+</div>
+<br>
+<br>
+
+<div class="container" align="top">
+    <a href="/static/msft_dailyquotes.xlsx" target="blank"><button class="btn btn-dark">Download this spreadsheet</button></a>
+</div>
+{% endblock %}

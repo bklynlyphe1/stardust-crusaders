@@ -1,0 +1,15 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<div class=container>
+  <h1></h1>
+  {% for table in tables %}
+  <div class= table table-bordered table-responsive>
+    <h2>{{titles[loop.index]}}</h2>
+    {{ table|safe }}
+  </div>
+  <br>
+  <br>
+  {% endfor %}
+</div>
+{% endblock %}

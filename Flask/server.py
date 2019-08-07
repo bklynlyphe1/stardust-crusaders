@@ -19,7 +19,7 @@ def reverse():
     df = pd.read_csv("/Flask/static/train.csv")
     reverse = df[df.columns[::-1]]
     reverse.to_csv("/Flask/static/reverse.csv")
-    reverse = pd.read_csv("/jojolion/static/reverse.csv", index_col=0)
+    reverse = pd.read_csv("/Flask/static/reverse.csv", index_col=0)
     reverse = reverse.head()
     odd_cols = df[df.columns[::2]]
     odd_cols.to_csv("/Flask/static/odd_cols.csv")
